@@ -117,6 +117,9 @@ export default async function createApp(): Promise<express.Application> {
 		next();
 	});
 
+  console.log(`!!!`)
+  console.log(env.CORS_ENABLED)
+  console.log(typeof env.CORS_ENABLED)
 	if (env.CORS_ENABLED === true) {
 		app.use(cors);
 	}

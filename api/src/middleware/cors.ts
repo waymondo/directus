@@ -4,6 +4,9 @@ import env from '../env';
 
 let corsMiddleware: RequestHandler = (req, res, next) => next();
 
+console.log(`???`)
+console.log(env.CORS_ENABLED)
+console.log(typeof env.CORS_ENABLED)
 if (env.CORS_ENABLED === true) {
 	corsMiddleware = cors({
 		origin: env.CORS_ORIGIN || true,
